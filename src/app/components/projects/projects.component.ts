@@ -19,7 +19,7 @@ export class ProjectsComponent implements AfterViewInit {
         'Comprehensive healthcare platform with AI-powered diagnostics, patient management, and telemedicine features. Built with Angular for seamless user experience.',
       image: '🏥',
       technologies: ['Angular', 'TypeScript', 'RxJS', 'Bootstrap', 'REST API'],
-      demoUrl: '#',
+      demoUrl: 'https://cairah.ai/home',
       githubUrl: '#',
       highlights: ['AI Integration', 'Real-time Updates', 'Responsive Design'],
     },
