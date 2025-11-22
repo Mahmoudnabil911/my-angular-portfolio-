@@ -1,0 +1,22 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="scroll-progress" [style.width.%]="scrollProgress"></div>
+
+    <div class="header-content">
+        <div class="logo" (click)="scrollToSection('hero')">
+            <span class="logo-text">MN</span>
+        </div>
+
+        <nav class="nav">
+            <a (click)="scrollToSection('about')" class="nav-link">About</a>
+            <a (click)="scrollToSection('skills')" class="nav-link">Skills</a>
+            <a (click)="scrollToSection('experience')" class="nav-link">Experience</a>
+            <a (click)="scrollToSection('projects')" class="nav-link">Projects</a>
+            <a (click)="scrollToSection('contact')" class="nav-link">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" (click)="toggleTheme()"
+            [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+            <span class="icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+        </button>
+    </div>
+</header>

@@ -1,0 +1,35 @@
+<section id="hero" class="hero">
+    <div class="hero-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Mahmoud Nabil</span>
+        </h1>
+
+        <h2 class="hero-subtitle">Frontend Developer (Angular)</h2>
+
+        <p class="hero-location">
+            <span class="location-icon">📍</span>
+            Nasr City, Cairo, Egypt
+        </p>
+
+        <div class="hero-description">
+            <p class="typed-text">{{ typedText }}<span class="cursor">|</span></p>
+        </div>
+
+        <div class="hero-cta">
+            <button class="btn btn-primary" (click)="downloadCV()">
+                <span class="btn-icon">📥</span>
+                Download CV
+            </button>
+            <button class="btn btn-secondary" (click)="scrollToProjects()">
+                <span class="btn-icon">💼</span>
+                View Projects
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,43 @@
+<section id="projects" class="projects-section">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+
+        <div class="projects-grid">
+            <div class="project-card" *ngFor="let project of projects">
+                <div class="project-image">
+                    <div class="image-placeholder">
+                        <span class="project-icon">{{ project.image }}</span>
+                    </div>
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <a [href]="project.demoUrl" class="overlay-btn" target="_blank" rel="noopener">
+                                <span>🔗</span> Live Demo
+                            </a>
+                            <a [href]="project.githubUrl" class="overlay-btn" target="_blank" rel="noopener">
+                                <span>💻</span> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <h4 class="project-subtitle">{{ project.subtitle }}</h4>
+                    <p class="project-description">{{ project.description }}</p>
+
+                    <div class="project-highlights">
+                        <span class="highlight-badge" *ngFor="let highlight of project.highlights">
+                            ✨ {{ highlight }}
+                        </span>
+                    </div>
+
+                    <div class="project-technologies">
+                        <span class="tech-badge" *ngFor="let tech of project.technologies">
+                            {{ tech }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
