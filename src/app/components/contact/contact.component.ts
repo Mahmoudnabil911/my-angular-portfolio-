@@ -46,36 +46,36 @@ export class ContactComponent implements AfterViewInit {
   };
 
   ngAfterViewInit(): void {
-    this.animateContact();
+    // Temporarily disabled animation for debugging
+    // this.animateContact();
   }
 
   animateContact(): void {
-    gsap.from('.contact-card', {
-      scrollTrigger: {
-        trigger: '.contact-section',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      y: 30,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: 'power3.out',
-    });
-
-    gsap.from('.contact-form', {
-      scrollTrigger: {
-        trigger: '.contact-section',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      x: 50,
-      duration: 0.8,
-      ease: 'power3.out',
-    });
+    // gsap.from('.contact-card', {
+    //   scrollTrigger: {
+    //     trigger: '.contact-section',
+    //     start: 'top 80%',
+    //     end: 'bottom 20%',
+    //     toggleActions: 'play none none reverse',
+    //   },
+    //   opacity: 0,
+    //   y: 30,
+    //   duration: 0.6,
+    //   stagger: 0.1,
+    //   ease: 'power3.out',
+    // });
+    // gsap.from('.contact-form', {
+    //   scrollTrigger: {
+    //     trigger: '.contact-section',
+    //     start: 'top 80%',
+    //     end: 'bottom 20%',
+    //     toggleActions: 'play none none reverse',
+    //   },
+    //   opacity: 0,
+    //   x: 50,
+    //   duration: 0.8,
+    //   ease: 'power3.out',
+    // });
   }
 
   onSubmit(): void {

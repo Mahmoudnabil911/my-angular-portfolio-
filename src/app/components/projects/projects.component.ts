@@ -63,22 +63,23 @@ export class ProjectsComponent implements AfterViewInit {
   ];
 
   ngAfterViewInit(): void {
-    this.animateProjects();
+    // Temporarily disabled animation for debugging
+    // this.animateProjects();
   }
 
   animateProjects(): void {
-    gsap.from('.project-card', {
-      scrollTrigger: {
-        trigger: '.projects-section',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      y: 50,
-      duration: 0.6,
-      stagger: 0.2,
-      ease: 'power3.out',
-    });
+    // gsap.from('.project-card', {
+    //   scrollTrigger: {
+    //     trigger: '.projects-section',
+    //     start: 'top 80%',
+    //     end: 'bottom 20%',
+    //     toggleActions: 'play none none none',
+    //   },
+    //   opacity: 0,
+    //   y: 50,
+    //   duration: 0.6,
+    //   stagger: 0.2,
+    //   ease: 'power3.out',
+    // });
   }
 }
