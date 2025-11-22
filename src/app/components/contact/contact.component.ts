@@ -28,13 +28,13 @@ export class ContactComponent implements AfterViewInit {
       icon: '💼',
       label: 'LinkedIn',
       value: 'Mahmoud Nabil',
-      link: 'https://linkedin.com/in/mahmoud-nabil',
+      link: 'https://www.linkedin.com/in/mahmoud-elkholy-5480821ab/',
     },
     {
       icon: '💻',
       label: 'GitHub',
       value: 'mahmoudnabil',
-      link: 'https://github.com/mahmoudnabil',
+      link: 'https://github.com/Mahmoudnabil911',
     },
   ];
 

@@ -5,17 +5,20 @@
         <div class="projects-grid">
             <div class="project-card" *ngFor="let project of projects">
                 <div class="project-image">
+                    <span *ngIf="project.inProgress" class="in-progress-badge">🚧 In Progress</span>
                     <div class="image-placeholder">
-                        <span class="project-icon">{{ project.image }}</span>
+                        <img *ngIf="project.image.startsWith('/')" [src]="project.image" [alt]="project.title"
+                            class="project-img">
+                        <span *ngIf="!project.image.startsWith('/')" class="project-icon">{{ project.image }}</span>
                     </div>
                     <div class="project-overlay">
                         <div class="overlay-content">
                             <a [href]="project.demoUrl" class="overlay-btn" target="_blank" rel="noopener">
                                 <span>🔗</span> Live Demo
                             </a>
-                            <a [href]="project.githubUrl" class="overlay-btn" target="_blank" rel="noopener">
+                            <!-- <a [href]="project.githubUrl" class="overlay-btn" target="_blank" rel="noopener">
                                 <span>💻</span> GitHub
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>

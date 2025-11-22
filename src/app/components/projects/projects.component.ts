@@ -17,11 +17,26 @@ export class ProjectsComponent implements AfterViewInit {
       subtitle: 'AI Healthcare Platform',
       description:
         'Comprehensive healthcare platform with AI-powered diagnostics, patient management, and telemedicine features. Built with Angular for seamless user experience.',
-      image: '🏥',
+      image: '/Layer_1.png',
       technologies: ['Angular', 'TypeScript', 'RxJS', 'Bootstrap', 'REST API'],
       demoUrl: 'https://cairah.ai/home',
-      githubUrl: '#',
+      // githubUrl: '#',
       highlights: ['AI Integration', 'Real-time Updates', 'Responsive Design'],
+    },
+    {
+      title: 'Parq',
+      subtitle: 'Parking Services Platform',
+      description:
+        'Smart parking solution with real-time availability, booking system, payment integration, and location-based services.',
+      image: '/about-parq.jpg',
+      technologies: ['Angular', 'Google Maps API', 'RxJS', 'Payment Gateway'],
+      demoUrl: '#',
+      // githubUrl: '#',
+      highlights: [
+        'Real-time Tracking',
+        'Payment Integration',
+        'Maps Integration',
+      ],
     },
     {
       title: 'LMS',
@@ -31,34 +46,21 @@ export class ProjectsComponent implements AfterViewInit {
       image: '📚',
       technologies: ['Angular', 'SCSS', 'RxJS', 'GSAP', 'REST API'],
       demoUrl: '#',
-      githubUrl: '#',
+      // githubUrl: '#',
       highlights: ['Video Streaming', 'Progress Tracking', 'Interactive UI'],
+      inProgress: true,
     },
     {
-      title: 'Khardah Associations',
+      title: 'Khardah',
       subtitle: 'Platform for Associations',
       description:
         'Community platform for managing associations, events, memberships, and communications with advanced admin dashboard.',
       image: '🤝',
       technologies: ['Angular', 'TypeScript', 'Bootstrap', 'State Management'],
       demoUrl: '#',
-      githubUrl: '#',
+      // githubUrl: '#',
       highlights: ['Admin Dashboard', 'Event Management', 'User Roles'],
-    },
-    {
-      title: 'Parq',
-      subtitle: 'Parking Services Platform',
-      description:
-        'Smart parking solution with real-time availability, booking system, payment integration, and location-based services.',
-      image: '🚗',
-      technologies: ['Angular', 'Google Maps API', 'RxJS', 'Payment Gateway'],
-      demoUrl: '#',
-      githubUrl: '#',
-      highlights: [
-        'Real-time Tracking',
-        'Payment Integration',
-        'Maps Integration',
-      ],
+      inProgress: true,
     },
   ];
 
