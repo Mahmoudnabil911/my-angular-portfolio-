@@ -55,11 +55,38 @@
     box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
     z-index: 2;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        animation: rotate-shine 3s linear infinite;
+    }
+}
+
+@keyframes rotate-shine {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .timeline-item:hover .marker-icon {
     transform: scale(1.15);
     box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+
+    &::before {
+        opacity: 1;
+    }
 }
 
 .marker-line {

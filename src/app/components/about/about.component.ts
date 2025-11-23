@@ -12,8 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class AboutComponent implements OnInit, AfterViewInit {
   stats = [
-    { value: '2+', label: 'Years Experience' },
-    { value: '20+', label: 'Projects Completed' },
+    { value: '3+', label: 'Years Experience' },
+    { value: '7+', label: 'Projects Completed' },
     { value: '5+', label: 'Technologies' },
     { value: '100%', label: 'Client Satisfaction' },
   ];

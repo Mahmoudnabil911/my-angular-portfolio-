@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">MN logo</title>
+  <defs>
+    <linearGradient id="mn-grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#00cc88"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="24" fill="url(#mn-grad)" />
+  <g fill="#ffffff" font-family="Segoe UI, Roboto, Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="50%" y="58%" font-size="56">MN</text>
+  </g>
+</svg>

@@ -36,7 +36,7 @@ export class ExperienceComponent implements AfterViewInit {
         'RxJS',
         'REST APIs',
       ],
-      icon: '🏥',
+      // icon: '🏥',
     },
     {
       company: 'Dopave',
@@ -63,7 +63,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Bootstrap',
         'Git',
       ],
-      icon: '💼',
+      // icon: '💼',
     },
     {
       company: 'Sahm',
@@ -80,7 +80,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Collaborated with development team on real-world projects',
       ],
       technologies: ['Angular', 'TypeScript', 'SCSS', 'REST APIs'],
-      icon: '🎓',
+      // icon: '🎓',
     },
     {
       company: 'HealthPay',
@@ -97,7 +97,7 @@ export class ExperienceComponent implements AfterViewInit {
         'Gained experience with team collaboration using Git',
       ],
       technologies: ['Angular', 'HTML5', 'CSS3', 'Git'],
-      icon: '🏥',
+      // icon: '🏥',
     },
   ];
 
