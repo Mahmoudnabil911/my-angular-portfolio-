@@ -6,7 +6,7 @@
             <span class="logo-text">MN</span>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" [class.open]="isMenuOpen" role="navigation">
             <a (click)="scrollToSection('about')" class="nav-link">About</a>
             <a (click)="scrollToSection('skills')" class="nav-link">Skills</a>
             <a (click)="scrollToSection('experience')" class="nav-link">Experience</a>
@@ -14,9 +14,22 @@
             <a (click)="scrollToSection('contact')" class="nav-link">Contact</a>
         </nav>
 
-        <button class="theme-toggle" (click)="toggleTheme()"
-            [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
-            <span class="icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
-        </button>
+        <div class="actions">
+            <button class="theme-toggle" (click)="toggleTheme()"
+                [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
+                <span class="icon">{{ isDarkMode ? '☀️' : '🌙' }}</span>
+            </button>
+
+            <!-- Mobile menu toggle (visible on small screens) -->
+            <button class="menu-toggle" (click)="toggleMenu()"
+                [attr.aria-label]="isMenuOpen ? 'Close navigation' : 'Open navigation'"
+                [attr.aria-expanded]="isMenuOpen">
+                <span class="hamburger" aria-hidden="true">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </span>
+            </button>
+        </div>
     </div>
 </header>

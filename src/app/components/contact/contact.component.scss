@@ -279,3 +279,52 @@
         width: 100%;
     }
 }
+
+/* Extra small screens: improve Get In Touch layout on narrow phones */
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .contact-grid {
+        gap: 1.5rem;
+    }
+
+    .contact-card {
+        // padding: 0.9rem;
+        width: 100%;
+    }
+
+    .contact-link {
+        padding: 0.5rem;
+    }
+
+    .contact-icon {
+        font-size: 2rem;
+        min-width: 40px;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}

@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   isScrolled = false;
   scrollProgress = 0;
   isDarkMode = true;
+  isMenuOpen = false;
 
   constructor(public themeService: ThemeService) {}
 
@@ -39,6 +40,22 @@ export class HeaderComponent implements OnInit {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  @HostListener('window:resize', [])
+  onResize(): void {
+    // Ensure menu is closed when switching to larger screens
+    if (window.innerWidth > 768 && this.isMenuOpen) {
+      this.isMenuOpen = false;
     }
   }
 }

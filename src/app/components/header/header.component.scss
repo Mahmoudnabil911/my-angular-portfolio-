@@ -41,6 +41,12 @@
     align-items: center;
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .logo {
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -136,8 +142,95 @@
         padding: 1rem;
     }
 
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.03);
+        color: #a3a7aa;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        cursor: pointer;
+        margin-right: 0.5rem;
+        font-size: 1.2rem;
+        z-index: 1100;
+    }
+
+    /* Hamburger bars inside the button */
+    .menu-toggle .hamburger {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 20px;
+        height: 16px;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        height: 2px;
+        background: currentColor;
+        border-radius: 2px;
+        transition: transform 220ms cubic-bezier(.2, .9, .2, 1), opacity 150ms ease;
+        transform-origin: center;
+    }
+
+    /* Animated state when menu is open (uses aria-expanded attribute) */
+    .menu-toggle[aria-expanded="true"] {
+        background: rgba(255, 255, 255, 0.06);
+        color: #ffffff;
+    }
+
+    .menu-toggle[aria-expanded="true"] .bar1 {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .bar2 {
+        opacity: 0;
+        transform: scaleX(0.2);
+    }
+
+    .menu-toggle[aria-expanded="true"] .bar3 {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
     .nav {
-        display: none; // Will implement mobile menu later if needed
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        background: rgba(13, 13, 13, 0.95);
+        backdrop-filter: blur(6px);
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.75rem 0.5rem;
+        border-radius: 8px;
+        min-width: 180px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        transition: opacity 220ms cubic-bezier(.2, .9, .2, 1), transform 220ms cubic-bezier(.2, .9, .2, 1);
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+        transform-origin: top right;
+        z-index: 1050;
+    }
+
+    .nav.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .nav .nav-link {
+        padding: 0.6rem 1rem;
+        color: #e6e6e6;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    .nav .nav-link:hover {
+        background: rgba(255, 255, 255, 0.03);
     }
 
     .logo-text {
